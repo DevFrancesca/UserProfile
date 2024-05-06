@@ -46,7 +46,7 @@ export default function Login({ navigation}){
             </View>
           </View>
 
-          <Button>
+          <Button  onPress={() => navigation.navigate('profile')}>
             <Typography type="text3" es={{color: 'white'}}>
               Login
             </Typography>

@@ -1,11 +1,13 @@
 import React from 'react'
-import { Text, StyleSheet, View, Image} from 'react-native'
+import { Text, StyleSheet, View, Image, TouchableOpacity} from 'react-native'
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 import MainContainer, { MainWrapper } from '../mainContainer'
 import { TextInput } from 'react-native-gesture-handler';
+import Button from '../button';
+import Typography from '../typography';
 
 const SignUp = () => {
   return (
@@ -34,6 +36,13 @@ const SignUp = () => {
             placeholder='**********'
           />
         </View>
+        <Button>
+          <Typography type='text3' es={{color: "white"}}>Signup</Typography>
+        </Button>
+
+        <TouchableOpacity onPress={() => navigation.navigate('login')}>
+        <Typography type="text4" es={{marginTop: 30, color: 'grey'}}>Already have an account? <Typography type="text4" es={{color: 'rgb(80, 80, 80)'}}>Login here</Typography></Typography>
+        </TouchableOpacity>
       </View>
     </MainWrapper>
   </MainContainer>
@@ -45,20 +54,17 @@ const styles= StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "red",
   },
   inputContainer:{
     width: wp('90%'),
-    height: hp("50%"),
+    height: hp("40%"),
     alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: "blue",
-    gap: 5
+    justifyContent: 'space-between',
+    marginBottom: 20
   },
   input:{
-    flex: 1,
-    height: '10%',
-    width: '90%',
+    height: '17%',
+    width: '99%',
     borderColor: 'gray',
     borderWidth: 1,
     padding: 10,
