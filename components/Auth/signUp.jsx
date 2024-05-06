@@ -9,7 +9,7 @@ import { TextInput } from 'react-native-gesture-handler';
 import Button from '../button';
 import Typography from '../typography';
 
-const SignUp = () => {
+export default function SignUP({ navigation, route }) {
   return (
   <MainContainer>
     <MainWrapper es={{ justifyContent: 'center' }}>
@@ -36,7 +36,7 @@ const SignUp = () => {
             placeholder='**********'
           />
         </View>
-        <Button>
+        <Button  onPress={() => navigation.navigate('profile')}>
           <Typography type='text3' es={{color: "white"}}>Signup</Typography>
         </Button>
 
@@ -70,5 +70,5 @@ const styles= StyleSheet.create({
     padding: 10,
     borderRadius: 5,
   }
-})
-export default SignUp
+});
+// export default SignUp

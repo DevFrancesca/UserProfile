@@ -5,8 +5,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from "./components/Auth/login";
 import SignUp from "./components/Auth/signUp";
 import UserProfile from "./components/Auth/userProfile";
-// import MainContainer, {MainWrapper} from "./components/mainContainer";
-// import Typography from "./components/typography";
 
 const Stack = createStackNavigator()
 export default function App() {
@@ -20,6 +18,7 @@ export default function App() {
 		>
 			<Stack.Screen name="login" component={Login}/>
 			<Stack.Screen name="signup" component={SignUp}/>
+			<Stack.Screen name="profile" component={UserProfile}/>
 		</Stack.Navigator>
    </NavigationContainer>
 	);

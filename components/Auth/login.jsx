@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     height: hp("20%"),
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 15
+    gap: 25
   },
   inputWrapper: {
     width: '100%',
@@ -98,14 +98,6 @@ const styles = StyleSheet.create({
     height: 20,
     resizeMode: 'contain',
   },
-  // button: {
-  //   backgroundColor: 'rgb(243, 89, 72)',
-  //   width: '100%',
-  //   height: hp('5.5%'),
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   borderRadius: 10,
-  // },
 });
 
 // export default Login;
