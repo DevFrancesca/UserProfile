@@ -1,20 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View, Image, TextInput } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Login from "./components/Auth/login";
+import SignUp from "./components/Auth/signUp";
+import UserProfile from "./components/Auth/userProfile";
+// import MainContainer, {MainWrapper} from "./components/mainContainer";
+// import Typography from "./components/typography";
 
+const Stack = createStackNavigator()
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+	return (
+   <NavigationContainer>
+		<Stack.Navigator
+			screenOptions={{
+				headerShown: false,
+			}}
+		>
+			<Stack.Screen name="login" component={Login}/>
+			<Stack.Screen name="signup" component={SignUp}/>
+		</Stack.Navigator>
+   </NavigationContainer>
+	);
 }
 
+{/* <View style={styles.container}>
+	<Image
+		source={require('./assets/finsWorth.jpg')}
+		style={{width: 100, height: 100}}
+	/>
+	<Typography type="text1">Login</Typography>
+	<TextInput
+	 style={styles.input}
+	 placeholder="Username"
+	 />
+</View> */}
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+	container: {
+		alignItems: "center",
+		justifyContent: "center",
+		// margin: "100"
+	},
 });
