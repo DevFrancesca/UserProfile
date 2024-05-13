@@ -1,7 +1,7 @@
 import React from 'react'
-import MainContainer, { MainWrapper } from '../mainContainer'
+import MainContainer, { MainWrapper } from '../../mainContainer'
 import { View, StyleSheet } from 'react-native'
-import Typography from '../typography'
+import Typography from '../../typography'
 
 const UserProfile = () => {
   return (

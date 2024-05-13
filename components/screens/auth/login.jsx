@@ -4,9 +4,9 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
-import Typography from '../typography';
-import MainContainer, { MainWrapper } from '../mainContainer';
-import Button from '../button';
+import Typography from '../../typography';
+import MainContainer, { MainWrapper } from '../../mainContainer';
+import Button from '../../button';
 
 export default function Login({ navigation}){
   return (
@@ -25,7 +25,7 @@ export default function Login({ navigation}){
               />
               <TouchableOpacity style={styles.iconContainer}>
                 <Image
-                  source={require('../images/cancel.svg')}
+                  source={require('../images/cancel.png')}
                   style={styles.icon}
                 />
               </TouchableOpacity>
@@ -33,13 +33,13 @@ export default function Login({ navigation}){
 
             <View style={styles.inputWrapper}>
               <TextInput
-                style={styles.input}
-                placeholder="Password"
+                style={styles.input}  
+                placeholder="*******"
               />
 
               <TouchableOpacity style={styles.iconContainer}>
                 <Image
-                  source={require('../images/eye.svg')}
+                  source={require('../images/hide.png')}
                   style={styles.icon}
                 />
               </TouchableOpacity>
@@ -100,4 +100,3 @@ const styles = StyleSheet.create({
   },
 });
 
-// export default Login;
